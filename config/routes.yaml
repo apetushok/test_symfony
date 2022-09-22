@@ -1,0 +1,22 @@
+
+triangle_calculation:
+    path: /triangle/{a}/{b}/{c}
+    controller: App\Controller\GeometryController::triangle
+    methods: GET
+    requirements:
+        a: '\d|\d+(?:\.\d+)'
+        b: '\d|\d+(?:\.\d+)'
+        c: '\d|\d+(?:\.\d+)'
+    defaults:
+        a: 0
+        b: 0
+        c: 0
+circle_calculation:
+    path: /circle/{radius}
+    controller: App\Controller\GeometryController::circle
+    methods: GET
+    requirements:
+        radius: '\d|\d+(?:\.\d+)'
+    defaults:
+        radius: 0
+
